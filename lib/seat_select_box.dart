@@ -4,8 +4,18 @@ class SeatSelectBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-        child: Container(
-      color: Colors.green,
-    ));
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Screen',
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
