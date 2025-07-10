@@ -24,6 +24,7 @@ class SeatPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Seats'),
       ),
+      backgroundColor: Colors.grey[200],
       body: Column(
         children: [
           SeatSelectBox(),
