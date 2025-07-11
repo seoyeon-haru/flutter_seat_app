@@ -13,6 +13,7 @@ class SeatBottom extends StatelessWidget {
           )),
       child: Column(
         children: [
+          SizedBox(height: 20),
           Text(
             '선택된 좌석 없음',
             style: TextStyle(
