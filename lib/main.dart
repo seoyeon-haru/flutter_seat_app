@@ -42,7 +42,7 @@ class _SeatPageState extends State<SeatPage> {
       backgroundColor: Colors.grey[200],
       body: Column(
         children: [
-          SeatSelectBox(selectedRow, selectedCol),
+          SeatSelectBox(selectedRow, selectedCol, onSelected),
           SeatBottom(selectedRow, selectedCol),
         ],
       ),
