@@ -18,7 +18,9 @@ class SeatBottom extends StatelessWidget {
         children: [
           SizedBox(height: 20),
           Text(
-            '선택된 좌석 없음',
+            selectedRow == null && selectedCol == null
+                ? '선택된 좌석 없음'
+                : '$selectedRow - $selectedCol',
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
