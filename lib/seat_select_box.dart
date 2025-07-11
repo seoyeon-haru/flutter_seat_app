@@ -27,8 +27,8 @@ class SeatSelectBox extends StatelessWidget {
           SizedBox(height: 8),
           Row(
             children: [
-              label(),
-              label(),
+              label('Available', Colors.grey),
+              label('Selected', Colors.amber),
             ],
           ),
         ],
@@ -36,20 +36,20 @@ class SeatSelectBox extends StatelessWidget {
     );
   }
 
-  Row label() {
+  Row label(String text, Color color) {
     return Row(
-              children: [
-                Text('Available'),
-                Container(
-                  width: 36,
-                  height: 36,
-                  decoration: BoxDecoration(
-                    color: Colors.grey,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                )
-              ],
-            );
+      children: [
+        Text(text),
+        Container(
+          width: 36,
+          height: 36,
+          decoration: BoxDecoration(
+            color: color,
+            borderRadius: BorderRadius.circular(10),
+          ),
+        )
+      ],
+    );
   }
 
   Widget row(int rowNum) {
