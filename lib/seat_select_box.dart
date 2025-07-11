@@ -92,14 +92,19 @@ class SeatSelectBox extends StatelessWidget {
     return Expanded(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 2),
-        child: AspectRatio(
-          aspectRatio: 1,
-          child: Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: rowNum == selectedRow && colNum == selectedCol
-                  ? Colors.amber
-                  : Colors.grey,
+        child: GestureDetector(
+          onTap: () {
+            onSelected(rowNum, colNum);
+          },
+          child: AspectRatio(
+            aspectRatio: 1,
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: rowNum == selectedRow && colNum == selectedCol
+                    ? Colors.amber
+                    : Colors.grey,
+              ),
             ),
           ),
         ),
