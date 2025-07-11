@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class SeatSelectBox extends StatelessWidget {
+  SeatSelectBox(this.selectedRow, this.selectedCol);
+
+  int? selectedRow;
+  int? selectedCol;
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -68,22 +72,22 @@ class SeatSelectBox extends StatelessWidget {
               ),
             ),
           ),
-          seat(),
-          seat(),
-          seat(),
-          seat(),
-          seat(),
-          seat(),
-          seat(),
-          seat(),
-          seat(),
-          seat(),
+          seat(rowNum, 1),
+          seat(rowNum, 2),
+          seat(rowNum, 3),
+          seat(rowNum, 4),
+          seat(rowNum, 5),
+          seat(rowNum, 6),
+          seat(rowNum, 7),
+          seat(rowNum, 8),
+          seat(rowNum, 9),
+          seat(rowNum, 10),
         ],
       ),
     );
   }
 
-  Widget seat() {
+  Widget seat(int rowNum, int colNum) {
     return Expanded(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 2),
@@ -92,7 +96,9 @@ class SeatSelectBox extends StatelessWidget {
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
-              color: Colors.grey,
+              color: rowNum == selectedRow && colNum == selectedCol
+                  ? Colors.amber
+                  : Colors.grey,
             ),
           ),
         ),

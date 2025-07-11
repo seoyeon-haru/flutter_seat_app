@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class SeatBottom extends StatelessWidget {
+  SeatBottom(this.selectedRow, this.selectedCol);
+  int? selectedRow;
+  int? selectedCol;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -25,11 +28,12 @@ class SeatBottom extends StatelessWidget {
           SizedBox(
             width: 200,
             height: 56,
-            child: ElevatedButton(onPressed: () {}, 
-            style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.amber,
-            ),
-            child: Text('Book now'),
+            child: ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.amber,
+              ),
+              child: Text('Book now'),
             ),
           )
         ],
