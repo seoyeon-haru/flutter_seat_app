@@ -22,9 +22,32 @@ class SeatSelectBox extends StatelessWidget {
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ),
+              seat(),
+              seat(),
+              seat(),
+              seat(),
+              seat(),
+              seat(),
+              seat(),
+              seat(),
+              seat(),
+              seat(),
             ],
           ),
         ],
+      ),
+    );
+  }
+
+  Widget seat() {
+    return Expanded(
+      child: AspectRatio(
+        aspectRatio: 1,
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.grey,
+          ),
+        ),
       ),
     );
   }
