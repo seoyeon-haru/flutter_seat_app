@@ -24,6 +24,7 @@ class SeatSelectBox extends StatelessWidget {
           row(4),
           SizedBox(height: 8),
           row(5),
+          SizedBox(height: 8),
           Row(
             children: [
               Row(
