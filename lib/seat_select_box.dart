@@ -14,6 +14,7 @@ class SeatSelectBox extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
+          SizedBox(height: 12),
           row(1),
           SizedBox(height: 8),
           row(2),
