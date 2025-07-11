@@ -24,7 +24,23 @@ class SeatSelectBox extends StatelessWidget {
           row(4),
           SizedBox(height: 8),
           row(5),
-          SizedBox(height: 8),
+          Row(
+            children: [
+              Row(
+                children: [
+                  Text('Available'),
+                  Container(
+                    width: 36,
+                    height: 36,
+                    decoration: BoxDecoration(
+                      color: Colors.grey,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  )
+                ],
+              )
+            ],
+          ),
         ],
       ),
     );
@@ -34,27 +50,27 @@ class SeatSelectBox extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Row(
-            children: [
-              Expanded(
-                child: Center(
-                  child: Text(
-                    '$rowNum',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-                  ),
-                ),
+        children: [
+          Expanded(
+            child: Center(
+              child: Text(
+                '$rowNum',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
-              seat(),
-              seat(),
-              seat(),
-              seat(),
-              seat(),
-              seat(),
-              seat(),
-              seat(),
-              seat(),
-              seat(),
-            ],
+            ),
           ),
+          seat(),
+          seat(),
+          seat(),
+          seat(),
+          seat(),
+          seat(),
+          seat(),
+          seat(),
+          seat(),
+          seat(),
+        ],
+      ),
     );
   }
 
