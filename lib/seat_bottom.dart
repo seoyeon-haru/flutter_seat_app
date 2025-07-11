@@ -21,6 +21,12 @@ class SeatBottom extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
+          ElevatedButton(onPressed: () {}, 
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.amber,
+          ),
+          child: Text('Book now'),
+          )
         ],
       ),
     );
