@@ -17,7 +17,15 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class SeatPage extends StatelessWidget {
+class SeatPage extends StatefulWidget {
+  @override
+  State<SeatPage> createState() => _SeatPageState();
+}
+
+class _SeatPageState extends State<SeatPage> {
+  int? selectedRow;
+  int? selectedColumn;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
