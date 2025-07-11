@@ -41,11 +41,14 @@ class SeatSelectBox extends StatelessWidget {
 
   Widget seat() {
     return Expanded(
-      child: AspectRatio(
-        aspectRatio: 1,
-        child: Container(
-          decoration: BoxDecoration(
-            color: Colors.grey,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 2),
+        child: AspectRatio(
+          aspectRatio: 1,
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.grey,
+            ),
           ),
         ),
       ),
