@@ -26,6 +26,13 @@ class _SeatPageState extends State<SeatPage> {
   int? selectedRow;
   int? selectedCol;
 
+  void onSelected(int row, int col) {
+    setState(() {
+      selectedRow = row;
+      selectedCol = col;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
