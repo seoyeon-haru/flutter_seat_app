@@ -21,6 +21,7 @@ class SeatBottom extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
+          SizedBox(height: 20),
           SizedBox(
             width: 200,
             height: 56,
